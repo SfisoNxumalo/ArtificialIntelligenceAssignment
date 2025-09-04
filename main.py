@@ -34,13 +34,13 @@ X_train = tokenizer.texts_to_matrix(training_sentences, mode="binary")  # multi-
 # Compile with adam optimizer and sparse categorical crossentropy loss
 # Train on X_train and y_train for 400 epochs
 model = Sequential([
-    Dense(10, input_shape=(X_train.shape[1],), activation="relu"),
-    Dropout(0.9),
-    Dense(2, activation="relu"),
+    Dense(18, input_shape=(X_train.shape[1],), activation="relu"),
+    Dropout(0.2),
+    Dense(16, activation="relu"),
     Dense(len(labels), activation="softmax")
 ])
 model.compile(optimizer="adam", loss="sparse_categorical_crossentropy", metrics=["accuracy"])
-model.fit(X_train, y_train, epochs=20, verbose=1)
+model.fit(X_train, y_train, epochs=100, verbose=1)
 
 
 if __name__ == "__main__":
