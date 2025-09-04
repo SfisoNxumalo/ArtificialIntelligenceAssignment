@@ -33,7 +33,6 @@ X_train = tokenizer.texts_to_matrix(training_sentences, mode="binary")  # multi-
 # Layers: input Dense (32 neurons) -> Dropout 30% -> Dense 32 -> Output Dense with softmax for label probabilities
 # Compile with adam optimizer and sparse categorical crossentropy loss
 # Train on X_train and y_train for 400 epochs silently
-
 model = Sequential([
     Dense(2, input_shape=(X_train.shape[1],), activation="relu"),
     Dropout(0.9),
@@ -42,3 +41,12 @@ model = Sequential([
 ])
 model.compile(optimizer="adam", loss="sparse_categorical_crossentropy", metrics=["accuracy"])
 model.fit(X_train, y_train, epochs=20, verbose=1)
+
+
+if __name__ == "__main__":
+    print("1Nebula Chatbot ready! Type 'quit' to exit.")
+    while True:
+        user_input = input("You: ")
+        if user_input.lower().strip() == "quit":
+            break
+        print("Bot:", "Hellow")
