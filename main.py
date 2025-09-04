@@ -27,3 +27,18 @@ y_train = np.array([label_to_index[l] for l in training_labels], dtype=np.int32)
 tokenizer = Tokenizer(oov_token="<OOV>")
 tokenizer.fit_on_texts(training_sentences)
 X_train = tokenizer.texts_to_matrix(training_sentences, mode="binary")  # multi-hot BoW with OOV bucket
+
+# ---- 4) MODEL ----
+# Build a neural network that will learn which intent a sentence belongs to
+# Layers: input Dense (32 neurons) -> Dropout 30% -> Dense 32 -> Output Dense with softmax for label probabilities
+# Compile with adam optimizer and sparse categorical crossentropy loss
+# Train on X_train and y_train for 400 epochs silently
+
+model = Sequential([
+    Dense(2, input_shape=(X_train.shape[1],), activation="relu"),
+    Dropout(0.9),
+    Dense(2, activation="relu"),
+    Dense(len(labels), activation="softmax")
+])
+model.compile(optimizer="adam", loss="sparse_categorical_crossentropy", metrics=["accuracy"])
+model.fit(X_train, y_train, epochs=20, verbose=1)
