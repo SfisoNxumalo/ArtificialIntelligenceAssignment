@@ -30,22 +30,23 @@ Thanks (e.g., "Thank you")
 Returns predefined responses
 
 Provides a foundation to expand with 1Nebula-specific use cases, such as:
-
-Explaining services
-Capturing feedback during campaigns
-Sentiment analysis for customer insights
+- Explaining services
+- Capturing feedback during campaigns
+- Sentiment analysis for customer insights
 
 ## Setup
 Clone this repo or copy the code into a Python file (e.g., chatbot.py).
 
 Install dependencies:
 
-pip install tensorflow nltk
+`pip install tensorflow nltk`
 
 Download NLTK data:
 
+```
 import nltk
 nltk.download('punkt')
+```
 
 
 Run the chatbot:
