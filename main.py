@@ -42,9 +42,7 @@ model = Sequential([
 model.compile(optimizer="adam", loss="sparse_categorical_crossentropy", metrics=["accuracy"])
 model.fit(X_train, y_train, epochs=400, verbose=0)
 
-# ---- 5) INTENT HELPERS ----
-THRESHOLD = 0.55  # confidence gate to avoid random answers
-
+# Set a confidence threshold so the bot only responds if it's reasonably sure of the user's intent
 THRESHOLD = 0.55  # confidence gate to avoid random answers
 
 

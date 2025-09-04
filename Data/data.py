@@ -78,3 +78,71 @@ training_labels = [
     # Privacy
     "privacy","privacy","privacy",
 ]
+
+keyword_overrides = {
+    "company_info":   ["1nebula", "one nebula", "nebula"],
+    "product_info":   ["oneview", "one view"],
+    "integrations":   ["microsoft", "aws", "azure", "vodacom", "telkom", "amazon"],
+    "pricing":        ["pricing", "price", "cost", "costs", "billing", "bill", "expensive"],
+    "privacy":        ["privacy", "security", "secure", "data", "gdpr", "popia"],
+    "support":        ["support", "help", "agent", "human", "contact", "call"],
+    "demo_request":   ["demo", "trial", "promotion", "promo", "offer"],
+}
+
+responses = {
+    "greeting": [
+        "Hello! How can I help today?",
+        "Hi there! Ask me about OneView, pricing, or booking a demo.",
+        "Hey! Looking for a demo, pricing, or integrations?"
+    ],
+    "farewell": [
+        "Goodbye! 👋",
+        "See you! Have a great day.",
+        "Take care!"
+    ],
+    "thanks": [
+        "You're welcome!",
+        "Happy to help.",
+        "Anytime!"
+    ],
+    "company_info": [
+        "1Nebula is a Cape Town–based tech company focused on cloud-native software and technology expense management. Our main product is OneView.",
+        "We help businesses manage IT spend across cloud, mobile, telecom, and networking—bringing it all into one place with OneView."
+    ],
+    "product_info": [
+        "OneView is a SaaS platform that tracks and controls technology expenses across vendors (e.g., Microsoft, AWS, Vodacom, Telkom) with dashboards, budgets, alerts, and forecasting.",
+        "With OneView, you get visibility over cloud and telecom spend in one dashboard, plus tools for optimization and forecasting."
+    ],
+    "integrations": [
+        "We commonly work with Microsoft/Azure and AWS, and ingest data from telecom providers like Vodacom and Telkom for a single view.",
+        "Yes—cloud (Microsoft, AWS) and telecom (e.g., Vodacom, Telkom) sources can be integrated into OneView."
+    ],
+    "demo_request": [
+        "Great! I can arrange a demo. Drop your email and company name and we’ll reach out.",
+        "We’d love to show you OneView. Please share your email and company to book a slot."
+    ],
+    "support": [
+        "I can connect you with a human agent. Please share your email, or reach us at support@1nebula.com.",
+        "Tell me your email and a short description—I'll open a ticket for our team."
+    ],
+    "positive_feedback": [
+        "🎉 Awesome to hear! Would you like to book a live demo?",
+        "Love that! Want a tailored walkthrough for your environment?"
+    ],
+    "negative_feedback": [
+        "Thanks for the honesty. A specialist can help with cost concerns—want me to connect you?",
+        "I get it. We can tailor controls and budgets—shall I arrange a short consult?"
+    ],
+    "pricing": [
+        "Pricing depends on usage and scope. For an accurate estimate, please share your company size and email so our team can send a quote.",
+        "We don’t process sensitive billing data via the bot. I can connect you to a specialist for a tailored quote—what’s your email?"
+    ],
+    "privacy": [
+        "We’re careful with sensitive data and follow best practices (e.g., POPIA/GDPR-aligned). The bot won’t handle financial records; we’ll route those to a human.",
+        "Security and privacy matter to us. For detailed policies, I can connect you to our team—share your email if you’d like."
+    ],
+    "fallback": [
+        "I’m not sure I understood. I can help with OneView, pricing, demos, integrations, privacy, or support.",
+        "Could you rephrase that? Try: “What is OneView?”, “Book a demo”, “Pricing”, or “Integrations”."
+    ]
+}
