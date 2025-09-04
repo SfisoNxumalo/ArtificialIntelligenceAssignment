@@ -6,5 +6,4 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 import random
 import re
 
-from data import training_labels, training_sentences
-
+from Data.data import training_labels, training_sentences
