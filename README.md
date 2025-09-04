@@ -62,7 +62,7 @@ Bot: You're welcome!
 You: Bye
 Bot: See you!
 
-#### Disclaimer
+# Disclaimer
 This chatbot is only for practice and learning purposes.
 It was created as a submission for an assignment.
 It is not an official 1Nebula product and should not be used in production.
