@@ -40,7 +40,7 @@ model = Sequential([
     Dense(len(labels), activation="softmax")
 ])
 model.compile(optimizer="adam", loss="sparse_categorical_crossentropy", metrics=["accuracy"])
-model.fit(X_train, y_train, epochs=100, verbose=1)
+model.fit(X_train, y_train, epochs=500, verbose=1)
 
 
 if __name__ == "__main__":
