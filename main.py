@@ -32,9 +32,9 @@ X_train = tokenizer.texts_to_matrix(training_sentences, mode="binary")  # multi-
 # Build a neural network that will learn which intent a sentence belongs to
 # Layers: input Dense (32 neurons) -> Dropout 30% -> Dense 32 -> Output Dense with softmax for label probabilities
 # Compile with adam optimizer and sparse categorical crossentropy loss
-# Train on X_train and y_train for 400 epochs silently
+# Train on X_train and y_train for 400 epochs
 model = Sequential([
-    Dense(2, input_shape=(X_train.shape[1],), activation="relu"),
+    Dense(10, input_shape=(X_train.shape[1],), activation="relu"),
     Dropout(0.9),
     Dense(2, activation="relu"),
     Dense(len(labels), activation="softmax")
