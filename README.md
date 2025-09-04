@@ -54,13 +54,10 @@ Run the chatbot:
 python chatbot.py
 
 #### Example Conversation
-1Nebula Chatbot ready! Type 'quit' to exit.
-You: Hello
-Bot: Hi there!
-You: Thank you
-Bot: You're welcome!
-You: Bye
-Bot: See you!
+<img width="975" height="597" alt="image" src="https://github.com/user-attachments/assets/7a67a753-fa12-431a-b40b-11c0eeb73f44" />
+
+### Model Performance
+I trained a simple neural network with two hidden Dense layers (32 neurons each) and a 20% Dropout to classify intents in my chatbot. The model achieved 100% accuracy on the training set, and the training loss was very low, indicating it learned the training data perfectly. However, the validation accuracy remained around 9%, while the validation loss was extremely high (~10.5), which clearly shows the model is overfitting and failing to generalize to new inputs. This is likely because my dataset is small, with only about 109 sentences across 13+ intents. To improve performance, I plan to expand the dataset, use stronger regularization or higher dropout, experiment with simpler models, and apply data augmentation by rephrasing sentences and adding synonyms.
 
 # Disclaimer
 This chatbot is only for practice and learning purposes.
