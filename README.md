@@ -5,10 +5,9 @@ It was created to explore how AI and chatbots can support business communication
 
 The project is not a real product and does not represent an official 1Nebula system.
 
-About 1Nebula
-
-[1Nebula](https://www.1nebula.com/) is a SaaS technology company that that operates in the field of cloud-native software development and technology expense management. 
-Their offer multiple SAAS solutions, including OneView, which is a Software-as-a-Service (SaaS) platform that allows organizations to track and manage all their IT costs and infrastructure in one platform.
+#### About 1Nebula
+[1Nebula](https://www.1nebula.com/) is a software development company that that operates in the field of cloud-native software development and technology expense management. 
+They offer multiple SAAS solutions, an example is OneView, which is a Software-as-a-Service (SaaS) platform that allows organizations to track and manage all their IT costs and infrastructure on one platform.
 Some Facts about 1Nebula:
 - Microsoft Partner since 2014 and won SA ISV Partner of the Year in 2020
 - Highly focused SaaS solutions available through Azure Marketplace.
