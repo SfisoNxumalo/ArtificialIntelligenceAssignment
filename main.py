@@ -6,7 +6,8 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 import random
 import re
 
-from Data.data import training_labels, training_sentences
+from Data.data import training_labels, training_sentences, keyword_overrides, responses
+
 
 # ---- 2) LABEL ENCODING (stable order) ----
 # We convert the text labels (like 'greeting', 'farewell') into numbers the model can learn
@@ -40,17 +41,46 @@ model = Sequential([
     Dense(len(labels), activation="softmax")
 ])
 model.compile(optimizer="adam", loss="sparse_categorical_crossentropy", metrics=["accuracy"])
-model.fit(X_train, y_train, epochs=400, verbose=0)
+model.fit(X_train, y_train, epochs=400, verbose=1, validation_split=0.2)
 
 # Set a confidence threshold so the bot only responds if it's reasonably sure of the user's intent
 THRESHOLD = 0.55  # confidence gate to avoid random answers
 
+def apply_keyword_overrides(text_lower: str):
+    for intent, keywords in keyword_overrides.items():
+        if any(k in text_lower for k in keywords):
+            return intent
+    return None
+
+def classify_intent(text: str):
+    text_lower = text.lower().strip()
+    override = apply_keyword_overrides(text_lower)
+    if override:
+        return override, 0.99
+
+    x = tokenizer.texts_to_matrix([text], mode="binary")
+    probs = model.predict(x, verbose=0)[0]
+    idx = int(np.argmax(probs))
+    intent = labels[idx]
+    conf = float(probs[idx])
+    if conf < THRESHOLD:
+        return "fallback", conf
+    return intent, conf
+
+def chatbot_response(text: str):
+    intent, conf = classify_intent(text)
+
+    if intent in ("pricing",) and re.search(r"\b(bill|billing|invoice|financial|finance)\b", text.lower()):
+        return "For billing/financial queries, I’ll connect you with a human specialist. Please share your email."
+
+    return random.choice(responses.get(intent, responses["fallback"]))
 
 
 if __name__ == "__main__":
+
     print("1Nebula Chatbot ready! Type 'quit' to exit.")
     while True:
         user_input = input("You: ")
         if user_input.lower().strip() == "quit":
             break
-        print("Bot:", "Hellow")
+        print("Bot:", chatbot_response(user_input))
