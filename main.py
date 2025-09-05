@@ -41,7 +41,7 @@ model = Sequential([
     Dense(len(labels), activation="softmax")
 ])
 model.compile(optimizer="adam", loss="sparse_categorical_crossentropy", metrics=["accuracy"])
-model.fit(X_train, y_train, epochs=400, verbose=1, validation_split=0.2)
+model.fit(X_train, y_train, epochs=400, verbose=0, validation_split=0.2)
 
 # Set a confidence threshold so the bot only responds if it's reasonably sure of the user's intent
 THRESHOLD = 0.55  # confidence gate to avoid random answers
