@@ -3,7 +3,7 @@
 This repository contains a practice chatbot project developed as part of my academic assignment.
 It was created to explore how AI and chatbots can support business communication and customer engagement.
 
-The project is not a real product and does not represent an official 1Nebula system.
+The project is not a real product and does not represent an official 1Nebula system. All training data used in this project is synthetic.
 
 #### About 1Nebula
 [1Nebula](https://www.1nebula.com/) is a software development company that that operates in the field of cloud-native software development and technology expense management. 
@@ -54,7 +54,8 @@ Run the chatbot:
 python chatbot.py
 
 #### Example Conversation
-<img width="975" height="597" alt="image" src="https://github.com/user-attachments/assets/7a67a753-fa12-431a-b40b-11c0eeb73f44" />
+<img width="1083" height="459" alt="image" src="https://github.com/user-attachments/assets/5091debc-b775-4520-870a-0bc1ed725151" />
+
 
 ### Model Performance
 I trained a simple neural network with two hidden Dense layers (32 neurons each) and a 20% Dropout to classify intents in my chatbot. The model achieved 100% accuracy on the training set, and the training loss was very low, indicating it learned the training data perfectly. However, the validation accuracy remained around 9%, while the validation loss was extremely high (~10.5), which clearly shows the model is overfitting and failing to generalize to new inputs. This is likely because my dataset is small, with only about 109 sentences across 13+ intents. To improve performance, I plan to expand the dataset, use stronger regularization or higher dropout, experiment with simpler models, and apply data augmentation by rephrasing sentences and adding synonyms.
@@ -63,4 +64,4 @@ I trained a simple neural network with two hidden Dense layers (32 neurons each)
 This chatbot is only for practice and learning purposes.
 It was created as a submission for an assignment.
 It is not an official 1Nebula product and should not be used in production.
-This project was built with the help of ChatGPT (OpenAI) to explore how AI can be applied in customer engagement and feedback analysis. All training data used in this project is synthetic.
+This project was built with the help of ChatGPT (OpenAI) to explore how AI can be applied in customer engagement and feedback analysis.
