@@ -13,7 +13,7 @@ Some Facts about 1Nebula:
 - Highly focused SaaS solutions available through Azure Marketplace.
 - Focus on FinOps, Technology Expense Management and Software Development.
 - Primary industries include technology, retail, energy, professional services and finance.
- -- 
+
 ## Project Purpose:
 The chatbot demonstrates:
 Basic text classification with TensorFlow/Keras
