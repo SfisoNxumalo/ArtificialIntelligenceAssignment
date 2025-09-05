@@ -14,7 +14,7 @@ training_sentences = [
     "Tell me about 1Nebula", "Who founded 1Nebula?", "What services does OneView offer?", "Can you explain OneView?", "What is 1Nebula's main product?", "Describe OneView",
 
     # ---- Integrations / Vendors ----
-    "Do you integrate with Microsoft?", "Do you support AWS?", "Which vendors do you support?", "Do you work with Vodacom or Telkom?",
+    "Do you integrate with Microsoft?", "Do you support AWS?", "Which vendors do you support?", "Do you work with ISP?",
     "Do you work with Amazon Web Services?", "Is Azure supported?", "Which cloud providers are compatible?", "Can I connect OneView with Microsoft 365?", "Do you integrate with telecoms?",
 
     # ---- Demo / Trial / Promotions ----
@@ -76,7 +76,7 @@ training_labels = [
 keyword_overrides = {
     "company_info":   ["1nebula", "one nebula", "nebula"],
     "product_info":   ["oneview", "one view"],
-    "integrations":   ["microsoft", "aws", "azure", "vodacom", "telkom", "amazon"],
+    "integrations":   ["microsoft", "aws", "azure", "ISP"],
     "pricing":        ["pricing", "price", "cost", "costs", "billing", "bill", "expensive"],
     "privacy":        ["privacy", "security", "secure", "data", "gdpr", "popia"],
     "support":        ["support", "help", "agent", "human", "contact", "call"],
@@ -133,12 +133,12 @@ responses = {
     managers to make data-driven decisions.""",
     ],
     "integrations": [
-        "We commonly work with Microsoft/Azure and AWS, and ingest data from telecom providers like Vodacom and Telkom for a single view.",
-        "Yes—cloud (Microsoft, AWS) and telecom (e.g., Vodacom, Telkom) sources can be integrated into OneView.",
+        "We commonly work with Microsoft/Azure and AWS, and ingest data from ISPs for a single view.",
+        "Yes—cloud (Microsoft, AWS) and telecom (e.g., ISPs) sources can be integrated into OneView.",
         "OneView connects to Microsoft 365, Azure, AWS, and telecom vendors.",
         "Integrate your cloud and telecom accounts for a full spend overview.",
         "OneView supports major cloud and telecom platforms for unified tracking.",
-        "Connect OneView with Microsoft, AWS, Azure, Vodacom, and Telkom easily.",
+        "Connect OneView with Microsoft, AWS, Azure, ISPs easily.",
         "Data from multiple vendors is ingested into OneView automatically.",
         "OneView integrates cloud and telecom data for actionable insights.",
         "Vendor integrations include Microsoft, AWS, Azure, and telecom providers.",
