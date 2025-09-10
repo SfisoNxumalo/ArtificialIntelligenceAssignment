@@ -64,4 +64,7 @@ I trained a simple neural network with two hidden Dense layers (32 neurons each)
 This chatbot is only for practice and learning purposes.
 It was created as a submission for an assignment.
 It is not an official 1Nebula product and should not be used in production.
-This project was built with the help of ChatGPT (OpenAI) to explore how AI can be applied in customer engagement and feedback analysis.
+
+#### Resources
+https://youtu.be/t933Gh5fNrc?si=UFIJ1JPcelFDSAzr
+ChatGPT (OpenAI) to explore how AI can be applied in customer engagement and feedback analysis.
