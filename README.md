@@ -66,5 +66,5 @@ It was created as a submission for an assignment.
 It is not an official 1Nebula product and should not be used in production.
 
 #### Resources
-https://youtu.be/t933Gh5fNrc?si=UFIJ1JPcelFDSAzr \n
-ChatGPT (OpenAI) to explore how AI can be applied in customer engagement and feedback analysis.
+- https://youtu.be/t933Gh5fNrc?si=UFIJ1JPcelFDSAzr
+- ChatGPT (OpenAI) to explore how AI can be applied in customer engagement and feedback analysis.
